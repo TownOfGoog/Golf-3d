@@ -84,5 +84,5 @@ function onMouseUp(event) {
 }
 
 three.on('update', function () {
-  cube.rotateY(0.02);
+  cube.rotateY(0.0);
 });
