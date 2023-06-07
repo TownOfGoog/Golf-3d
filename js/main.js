@@ -1,11 +1,19 @@
 const three = new Threestrap.Bootstrap();
 
 const cube = new THREE.Mesh(
-  new THREE.BoxGeometry(1, 1, 1),
+  new THREE.SphereGeometry(0.2, 100, 100),
   new THREE.MeshBasicMaterial({ color: 0xff3333 })
 );
 
+const plane = new THREE.Mesh(
+  new THREE.PlaneGeometry(5, 5),
+  new THREE.MeshBasicMaterial({ color: 0x888888, side: THREE.DoubleSide })
+);
+plane.rotateX(Math.PI / 2);
+plane.position.y = -0.5;
+
 three.scene.add(cube);
+three.scene.add(plane);
 
 const cameraDistance = 2; // Adjust the desired distance of the camera from the cube
 
